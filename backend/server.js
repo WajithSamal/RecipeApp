@@ -20,6 +20,10 @@ app.use(cors({
 
 app.use(express.json())
 
+app.get('/',(req,res)=>{
+    res.json('Hello')
+})
+
 app.use((req,res,next) =>{
     console.log(req.path,req.method)
     next()
