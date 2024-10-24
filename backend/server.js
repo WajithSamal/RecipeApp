@@ -12,11 +12,11 @@ const fetchData = require('./services/fetchData')
 
 const app = express()
 
-app.use(cors({
-    origin:["https://recipe-app-frontend-zeta.vercel.app"],
-    methods:["GET","POST","DELETE"],
-    credentials: true
-}))
+// app.use(cors({
+//     origin:["https://recipe-app-frontend-zeta.vercel.app"],
+//     methods:["GET","POST","DELETE"],
+//     credentials: true
+// }))
 
 app.use(express.json())
 
