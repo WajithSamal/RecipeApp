@@ -2,6 +2,7 @@ require('dotenv').config()
 
 const express = require('express')
 const mongoose = require('mongoose')
+const cors = require('cors')
 const recipeRoutes = require('./routes/recipes')
 const categoryRoutes = require('./routes/categories')
 const userRoutes = require('./routes/user')
@@ -10,6 +11,12 @@ const fetchData = require('./services/fetchData')
 
 
 const app = express()
+
+app.use(cors({
+    origin:["https://recipe-app-frontend-zeta.vercel.app"],
+    methods:["GET","POST","DELETE"],
+    credentials: true
+}))
 
 app.use(express.json())
 
